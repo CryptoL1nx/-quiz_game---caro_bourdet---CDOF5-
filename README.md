@@ -22,7 +22,7 @@ Key features include:
 
 1. Clone the Repository:
    ```bash
-   git clone <repository_url>
+   git clone [<repository_url>](https://github.com/CryptoL1nx/-quiz_game---caro_bourdet---CDOF5-)
    ```
    Alternatively, download the project ZIP file and extract it.
 

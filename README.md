@@ -12,97 +12,72 @@ Key features include:
 
 ---
 
-## Prerequisites
-- Python 3.7 or later installed.
-- A code editor like [Visual Studio Code](https://code.visualstudio.com/) (recommended).
+## How to Run the Project
 
----
+### Prerequisites
+1. Install Python 3.7 or later from [python.org](https://www.python.org/).
+2. Install a code editor like [Visual Studio Code](https://code.visualstudio.com/) (optional but recommended).
 
-## Setup Instructions
+### Steps to Run
 
-### 1. Clone the Repository
-If you are using Git, clone the repository:
-```bash
-git clone <repository_url>
-```
-Otherwise, download and extract the project ZIP file.
+1. Clone the Repository:
+   ```bash
+   git clone <repository_url>
+   ```
+   Alternatively, download the project ZIP file and extract it.
 
-### 2. Open the Project in VS Code
-1. Launch Visual Studio Code.
-2. Open the folder containing the project files (`quiz_game.py`).
+2. Navigate to the Project Directory:
+   ```bash
+   cd path/to/project
+   ```
 
-### 3. Install Python Dependencies (if any)
-If you decide to expand the project to include external libraries in the future, set up a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Mac/Linux
-venv\Scripts\activate   # On Windows
-```
-Currently, no additional libraries are required.
-
----
-
-## How to Run the Quiz
-
-1. Open a terminal in the project folder.
-2. Run the following command:
+3. Run the Quiz:
    ```bash
    python quiz_game.py
    ```
-3. Answer the questions as they appear in the terminal.
+
+4. Follow the prompts in the terminal to play the quiz.
 
 ---
 
-## Gameplay Instructions
+## Guide on How to Contribute
 
-1. **Start the Quiz**: The program will display 5 random questions from the question bank.
-2. **Answer Questions**: 
-   - Enter the number corresponding to your chosen option.
-   - If you answer incorrectly, you’ll get a second chance (no points awarded for the second attempt).
-3. **View Results**:
-   - At the end of the quiz, your score will be displayed along with the corrections for any mistakes.
+We welcome contributions to make this project better! Here’s how you can get started:
 
----
+### 1. Fork the Repository
+- Click on the `Fork` button at the top-right corner of the repository page to create your own copy of the project.
 
-## Example Output
+### 2. Clone Your Forked Repository
+- Use the following command to clone your forked repository:
+  ```bash
+  git clone <your_forked_repository_url>
+  ```
 
-```
-Welcome to the Advanced Banking Investment Quiz!
-Test your knowledge of bonds, cryptocurrencies, and taxation in finance!
+### 3. Create a New Branch
+- Always create a new branch for your changes to keep the `main` branch clean:
+  ```bash
+  git checkout -b feature/YourFeatureName
+  ```
 
-1. What is the primary factor affecting bond prices?
-1. Interest rates
-2. Stock market trends
-3. Real estate prices
-4. Consumer spending
-Enter the number of your answer: 1
-Correct! 🎉
+### 4. Make Your Changes
+- Add or improve functionality in the `quiz_game.py` script or enhance the documentation.
 
-...
+### 5. Test Your Changes
+- Run the project locally to ensure your changes work as expected.
 
-Your final score is: 4/5
+### 6. Commit and Push
+- Commit your changes with a meaningful message:
+  ```bash
+  git commit -m "Add your feature"
+  ```
+- Push your branch to your forked repository:
+  ```bash
+  git push origin feature/YourFeatureName
+  ```
 
-Here are the questions you missed with their correct answers:
-- What does a yield curve inversion typically indicate?
-  Correct answer: Potential economic recession
-
-Thank you for playing!
-```
-
----
-
-## Customization
-You can expand the question bank by modifying the `QUESTIONS_BANK` list in `quiz_game.py`.
-
----
-
-## Contributing
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
+### 7. Submit a Pull Request
+- Go to the original repository on GitHub and click on `New Pull Request`.
+- Provide a clear description of your changes and submit the pull request.
 
 ---
 
@@ -112,7 +87,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 ## Contact
-For questions or feedback, please reach out to:
-- **Email**: your-email@example.com
-- **GitHub**: [YourGitHubUsername](https://github.com/YourGitHubUsername)
-
+If you have questions or need help, feel free to reach out:
+- **Email**: caroline.bourdet@edu.devinci.fr
+- **GitHub**: [CryptoLynx](https://github.com/CrypoL1nx)

@@ -3,10 +3,11 @@
 # Advanced Banking Investment Quiz
 
 ## Description
-The **Advanced Banking Investment Quiz** is a Python-based console application designed to test and educate users on advanced investment concepts. The quiz covers topics like bonds, cryptocurrencies, and taxation in finance. It features a bank of 30 questions, with 5 random questions selected for each session.
+The **Advanced Banking Investment Quiz** is a Python-based console application designed to test and educate users on advanced investment concepts. The quiz covers topics like bonds, cryptocurrencies, and taxation in finance. It features a bank of 30 questions, with 5 random questions selected for each session. Additionally, each question is categorized by difficulty level (easy, medium, hard) to tailor the experience to the user's preference.
 
 Key features include:
 - Randomized questions for every quiz.
+- Difficulty selection (easy, medium, hard) for customized learning.
 - Educational second-chance attempts for incorrect answers.
 - Final score display with corrections for errors.
 
@@ -36,7 +37,9 @@ Key features include:
    python quiz_game.py
    ```
 
-4. Follow the prompts in the terminal to play the quiz.
+4. Follow the prompts in the terminal to:
+   - Select a difficulty level (easy, medium, hard).
+   - Answer the randomized questions displayed based on your chosen difficulty level.
 
 ---
 

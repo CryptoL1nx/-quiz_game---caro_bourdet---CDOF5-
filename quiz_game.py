@@ -1,11 +1,22 @@
 import random
 
+def print_ascii_quiz_header():
+    print("""
+    ███████╗██╗███╗   ██╗ █████╗ ███╗   ██╗ ██████╗███████╗     ██████╗ ██╗   ██╗██╗███████╗
+    ██╔════╝██║████╗  ██║██╔══██╗████╗  ██║██╔════╝██╔════╝    ██╔═══██╗██║   ██║██║╚══███╔╝
+    █████╗  ██║██╔██╗ ██║███████║██╔██╗ ██║██║     █████╗      ██║   ██║██║   ██║██║  ███╔╝ 
+    ██╔══╝  ██║██║╚██╗██║██╔══██║██║╚██╗██║██║     ██╔══╝      ██║▄▄ ██║██║   ██║██║ ███╔╝  
+    ██║     ██║██║ ╚████║██║  ██║██║ ╚████║╚██████╗███████╗    ╚██████╔╝╚██████╔╝██║███████╗
+    ╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝     ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝
+                                                                                      
+    """)
 # Bank of 30 questions on advanced investment topics (bonds, cryptocurrencies, and taxation)
 QUESTIONS_BANK = [
     {
         "question": "What is the primary factor affecting bond prices?",
         "options": ["Interest rates", "Stock market trends", "Real estate prices", "Consumer spending"],
-        "answer": "Interest rates"
+        "answer": "Interest rates",
+        "difficulty": "easy"
     },
     {
         "question": "What is a zero-coupon bond?",
@@ -15,17 +26,20 @@ QUESTIONS_BANK = [
             "A bond issued by the government",
             "A bond with a variable interest rate"
         ],
-        "answer": "A bond that does not pay periodic interest"
+        "answer": "A bond that does not pay periodic interest",
+        "difficulty": "medium"
     },
     {
         "question": "What is the term for the initial sale of a cryptocurrency to the public?",
         "options": ["Initial Coin Offering (ICO)", "Crypto Launch", "Token Generation Event", "Digital Fundraising"],
-        "answer": "Initial Coin Offering (ICO)"
+        "answer": "Initial Coin Offering (ICO)",
+        "difficulty": "easy"
     },
     {
         "question": "What is the tax rate typically applied to long-term capital gains in many countries?",
         "options": ["Lower than short-term gains", "Higher than short-term gains", "The same as short-term gains", "Not taxable"],
-        "answer": "Lower than short-term gains"
+        "answer": "Lower than short-term gains",
+        "difficulty": "easy"
     },
     {
         "question": "What is the significance of a bond's credit rating?",
@@ -35,7 +49,8 @@ QUESTIONS_BANK = [
             "It affects the bond's liquidity",
             "It indicates the bond's historical price performance"
         ],
-        "answer": "It reflects the issuer's ability to repay the debt"
+        "answer": "It reflects the issuer's ability to repay the debt",
+        "difficulty": "medium"
     },
     {
         "question": "What does a yield curve inversion typically indicate?",
@@ -45,7 +60,8 @@ QUESTIONS_BANK = [
             "Stable inflation",
             "High investor confidence"
         ],
-        "answer": "Potential economic recession"
+        "answer": "Potential economic recession",
+        "difficulty": "hard"
     },
     {
         "question": "What is the primary purpose of stablecoins in cryptocurrency?",
@@ -55,12 +71,14 @@ QUESTIONS_BANK = [
             "To maximize returns",
             "To fund blockchain projects"
         ],
-        "answer": "To provide price stability"
+        "answer": "To provide price stability",
+        "difficulty": "easy"
     },
     {
         "question": "Which type of bond is issued by corporations and is not backed by collateral?",
         "options": ["Convertible bonds", "Debenture bonds", "Municipal bonds", "Treasury bonds"],
-        "answer": "Debenture bonds"
+        "answer": "Debenture bonds",
+        "difficulty": "medium"
     },
     {
         "question": "What is a blockchain in the context of cryptocurrency?",
@@ -70,7 +88,8 @@ QUESTIONS_BANK = [
             "A cryptocurrency trading strategy",
             "A type of mining algorithm"
         ],
-        "answer": "A distributed ledger technology"
+        "answer": "A distributed ledger technology",
+        "difficulty": "easy"
     },
     {
         "question": "What does the term 'duration' refer to in bond investment?",
@@ -80,7 +99,8 @@ QUESTIONS_BANK = [
             "The bond's credit quality",
             "The bond's liquidity"
         ],
-        "answer": "The bond's sensitivity to interest rate changes"
+        "answer": "The bond's sensitivity to interest rate changes",
+        "difficulty": "hard"
     },
     {
         "question": "What is a capital gains tax?",
@@ -90,7 +110,8 @@ QUESTIONS_BANK = [
             "A tax on dividends",
             "A tax on gross income"
         ],
-        "answer": "A tax on profits from selling assets"
+        "answer": "A tax on profits from selling assets",
+        "difficulty": "easy"
     },
     {
         "question": "What is a junk bond?",
@@ -100,12 +121,14 @@ QUESTIONS_BANK = [
             "A bond issued by startups",
             "A bond with no interest payment"
         ],
-        "answer": "A bond with a low credit rating"
+        "answer": "A bond with a low credit rating",
+        "difficulty": "medium"
     },
     {
         "question": "Which of the following is NOT a type of tax applied in finance?",
         "options": ["Value-added tax", "Income tax", "Liquidity tax", "Capital gains tax"],
-        "answer": "Liquidity tax"
+        "answer": "Liquidity tax",
+        "difficulty": "easy"
     },
     {
         "question": "What is staking in cryptocurrency?",
@@ -115,7 +138,8 @@ QUESTIONS_BANK = [
             "Participating in a network's proof-of-stake system",
             "Paying for transaction fees"
         ],
-        "answer": "Participating in a network's proof-of-stake system"
+        "answer": "Participating in a network's proof-of-stake system",
+        "difficulty": "medium"
     },
     {
         "question": "What is an investment-grade bond?",
@@ -125,7 +149,8 @@ QUESTIONS_BANK = [
             "A bond with a high yield",
             "A bond issued by a startup"
         ],
-        "answer": "A bond with a high credit rating"
+        "answer": "A bond with a high credit rating",
+        "difficulty": "easy"
     },
     {
         "question": "What is the purpose of a bond's coupon payment?",
@@ -135,7 +160,8 @@ QUESTIONS_BANK = [
             "To provide liquidity",
             "To increase the bond's yield"
         ],
-        "answer": "To compensate the bondholder with periodic interest"
+        "answer": "To compensate the bondholder with periodic interest",
+        "difficulty": "medium"
     },
     {
         "question": "What is a cryptocurrency wallet?",
@@ -145,7 +171,8 @@ QUESTIONS_BANK = [
             "An account for trading on exchanges",
             "A tax tool for cryptocurrency"
         ],
-        "answer": "A device for storing private keys"
+        "answer": "A device for storing private keys",
+        "difficulty": "easy"
     },
     {
         "question": "Which tax principle applies to cross-border investments?",
@@ -155,9 +182,11 @@ QUESTIONS_BANK = [
             "Tax-free zones",
             "Flat rate taxation"
         ],
-        "answer": "Double taxation agreements"
-    },
-    # More questions can be added following the same structure
+        "answer": "Double taxation agreements",
+        "difficulty": "hard"
+    }
+# More questions can be added following the same structure
+
 ]
 
 def print_divider():
@@ -167,7 +196,7 @@ def print_divider():
 def ask_question(question, question_number, total_questions):
     """Ask a single quiz question with a second chance for incorrect answers."""
     print_divider()
-    print(f"Question {question_number}/{total_questions}")
+    print(f"Question {question_number}/{total_questions} (Difficulty: {question['difficulty'].capitalize()})")
     print(question['question'])
     for i, option in enumerate(question['options'], start=1):
         print(f"{i}. {option}")
@@ -193,10 +222,16 @@ def ask_question(question, question_number, total_questions):
 
 def main():
     """Main function to run the quiz game."""
+    print_ascii_quiz_header()
     print("\033[96mWelcome to the Advanced Banking Investment Quiz!\033[0m")
     print("Test your knowledge of bonds, cryptocurrencies, and taxation in finance!")
 
-    selected_questions = random.sample(QUESTIONS_BANK, 5)
+    difficulty = ""
+    while difficulty not in ["easy", "medium", "hard"]:
+        difficulty = input("Choose a difficulty level (easy, medium, hard): ").lower()
+
+    filtered_questions = [q for q in QUESTIONS_BANK if q['difficulty'] == difficulty]
+    selected_questions = random.sample(filtered_questions, 5)
 
     score = 0
     errors = []
